@@ -1,3 +1,4 @@
 # FAST API Course
 
-Start with: $ fastapi dev
+Start project before folder organization with: $ fastapi dev
+Start with folder organization with: $ fastapi dev app/main.py
