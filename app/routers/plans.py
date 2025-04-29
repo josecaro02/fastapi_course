@@ -16,5 +16,5 @@ async def create_plan(plan_data: Plan, session: SessionDep):
 
 @router.get('/plans', response_model=list[Plan], tags=['Plans'])
 async def list_plan(session:SessionDep):
-    plans = session.exec(select(Plan)).all()
+    plans = session.exec(select(Plan)).scalars().all()
     return plans

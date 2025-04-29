@@ -1,11 +1,16 @@
 from pydantic import BaseModel, EmailStr
 from sqlmodel import SQLModel, Field, Relationship
+from enum import Enum
 
+class StatusEnum(str, Enum):
+    ACTIVE = "active"
+    INACTIVE = "inactive"
 
 class CustomerPlan(SQLModel, table=True):
     id: int = Field(primary_key=True)
     plan_id: int = Field(foreign_key='plan.id')
     customer_id : int = Field(foreign_key='customer.id')
+    status :  StatusEnum = Field(default=StatusEnum.ACTIVE)
 
 class Plan(SQLModel, table=True):
     id: int | None = Field(primary_key=True)
