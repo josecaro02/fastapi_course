@@ -7,3 +7,8 @@ Dabase commands:
     - .tables: show tables
     - .schema <table_name>: describe a table
 
+
+Execute transactions creator: $ python create_multiple_transactions.py
+
+Testing:
+    - Execute test: $pytest app/tests.py
