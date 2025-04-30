@@ -11,4 +11,4 @@ Dabase commands:
 Execute transactions creator: $ python create_multiple_transactions.py
 
 Testing:
-    - Execute test: $pytest app/tests.py
+    - Execute test: $pytest -v app/tests/<test_file>
